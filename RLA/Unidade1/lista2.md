@@ -1,61 +1,56 @@
 
 # UNIFOR
 **Nome**: Nome do estudante <br>
-**Disciplina**: Raciocínio lógico algorítmico
+**Disciplina**: Raciocínio lógico algorítm
 
-## Lista de exercícios 01
+## Exercício exemplo
+Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o adicional de salário de funcionário por cargo de uma empresa fictícia. Sabe-se que os funcionários de cargo técnico receberão reajuste de 50%, cargo de gerência, um reajuste de 30% e demais, um reajuste de 10%. 
 
-### Exercício 01 (1 ponto)
-Represente, em fluxograma e pseudocódigo, um algoritmo para determinar se um número inteiro e positivo é par ou impar.
-
-#### Fluxograma (0,25 ponto)
-
+#### Fluxograma
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{Digite um número:}}
-B --> C[\numero\]
-C --> D{numero >= 0}
-D --FALSE--> E[O número não é positivo!]
-D --TRUE--> F[resto = numero % 2]
-E --> Z([FIM])
-F --> G{resto == 0}
-G --FALSE--> H{{O número é impar!}}
-G --TRUE--> I{{O número é par!}}
-H --> Z
-I --> Z
+A([INICIO]) --> B{{Digite o salário e profissão}}
+B --> C[\sal, prof\]
+C --> D{prof == 'Tecnico'}
+D --FALSE--> E{prof == 'Gerente'}
+D --TRUE--> F[sal_reaj = 1.5 * sal]
+E --FALSE--> H[sal_reaj = 1.1 * sal]
+E --TRUE--> G[sal_reaj = 1.3 * sal]
+G --> I([FIM])
+F --> I
+H --> J{{'Salário Reajustado = ', sal_reaj}}
+J --> I
 ```
 
-#### Pseudocódigo (0,5 ponto)
+#### Pseudocódigo
 ```
-1  ALGORTIMO verifica_par_impar
-2  DECLARE numero, resto: INTEIRO
-3  ESCREVA "Digite um número: "
-4  INICIO
-4  LEIA numero
-5  SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
-6    resto = numero % 2                 // calcula o resto da divisão por 2
-7    SE resto == 0 ENTAO                // verifica se o resto é igual a zero
-8      ESCREVA "O número é par!"
-9    SENAO
-10     ESCREVA "O número é impar!"
-11   FIM_SE
-11  SENAO                                // caso inteiro for negativo (condição linha 5)
-12    ESCREVA "O número deve ser postivo!"
-13  FIM_SE
-13 FIM
+1  ALGORITMO calReajuste
+2  DECLARE  sal, sal_reaj: real, prof: caractere
+3  INICIO
+4  LEIA sal, prof
+5  ESCOLHA
+6   CASO prof == “Técnico”		// caso 1
+7     sal_reaj ← 1.5 * sal
+8   CASO prof = “Gerente”		// caso 2
+9     sal_reaj ← 1.3 * sal
+10  SENÃO
+11    sal_reaj ← 1.1 * sal
+12 FIM_ESCOLHA
+13 ESCREVA “Salário Reajustado = “, sal_reaj
+14 FIM
 ```
 
-#### Teste de mesa (0,25 ponto)
-| numero | numero >= 0 | resto | resto == 0 | Saída |
-| -- | -- | -- | -- | -- | 
-| -1 | F |   |   | "O número deve ser postivo!" |
-| 0  | V | 0 | V | "O número é par!" |
-| 13 | V | 1 | F | "O número é impar!" |
-| 30 | V | 0 | V | "O número é par!" |
+#### Teste
+| sal | prof | prof == “Técnico” | prof = “Gerente” | sal_reaj | Saída |
+| -- | -- | -- | -- | -- | -- |
+| 1000 | Técnico | V | F | 1500 | “Salário Reajustado = 1500“ |
+| 2000 | Gerente | F | V | 2600 | “Salário Reajustado = 2600“ |
+| 9000 | Diretor | F | F | 9900 | “Salário Reajustado = 9900“ |
 
-## Exercício 02 (3 pontos)
-Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo salário de um funcionário. 
-Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão aumento de 20%; os demais terão aumento de 10%.
+## Lista de exercícios 02
+
+### Exercício 01 (2.5 pontos)
+Calcule a média de quatro números inteiros dados.
 
 #### Fluxograma (1.0 ponto)
 
@@ -67,44 +62,19 @@ A([INICIO]) --> B([FIM])
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+Algoritmo Media
 FIM_ALGORITMO
 ```
 
-#### Teste de mesa (1.0 ponto)
+#### Teste de mesa (0.5 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
 | Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
 | verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
 
-## Exercício 03 (3 pontos)
-Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
-
-#### Fluxograma (1 ponto)
-
-```mermaid
-flowchart TD
-A([INICIO]) --> B([FIM])
-```
-
-#### Pseudocódigo (1 ponto)
-
-```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
-```
-
-#### Teste de mesa (1 ponto)
-
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
-
-## Exercício 04 (3 pontos)
-Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. 
-Caso não atender a restrição de idade, calcular quantos anos faltam para o candidato estar apto.
+### Exercício 02 (2.5 pontos)
+Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
 
 #### Fluxograma (1.0 ponto)
 
@@ -116,14 +86,62 @@ A([INICIO]) --> B([FIM])
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+Algoritmo ConverteCelsiusFarenheit
 FIM_ALGORITMO
 ```
 
-#### Teste de mesa (1.0 ponto)
+#### Teste de mesa (0.5 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
 | Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
 | verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
 
+### Exercício 03 (2.5 pontos)
+Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
+O algoritmo deve retornar o resultado da operação selecionada simulando todas as operações de uma calculadora simples.
+
+#### Fluxograma (1.0 ponto)
+
+```mermaid
+flowchart TD
+A([INICIO]) --> B([FIM])
+```
+
+#### Pseudocódigo (1.0 ponto)
+
+```
+Algoritmo Calculadora
+FIM_ALGORITMO
+```
+
+#### Teste de mesa (0.5 ponto)
+
+| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+|      --      |      --      |      --      |      --      |      --      | 
+| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
+| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+
+### Exercício 04 (2.5 pontos)
+Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
+
+#### Fluxograma (1.0 ponto)
+
+```mermaid
+flowchart TD
+A([INICIO]) --> B([FIM])
+```
+
+#### Pseudocódigo (1.0 ponto)
+
+```
+Algoritmo ClassificaCategoria
+FIM_ALGORITMO
+```
+
+#### Teste de mesa (0.5 ponto)
+
+| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+|      --      |      --      |      --      |      --      |      --      | 
+| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
+| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
