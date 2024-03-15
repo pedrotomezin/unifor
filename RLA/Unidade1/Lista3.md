@@ -1,7 +1,7 @@
 
 # UNIFOR
 **Nome**: Nome do estudante <br>
-**Disciplina**: Raciocínio lógico algorítm
+**Disciplina**: Raciocínio lógico algorítmico
 
 ## Exercício exemplo 1
 Implemente e teste um programa que imprima os n primeiros números.
