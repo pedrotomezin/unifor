@@ -60,22 +60,40 @@ Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 ter�
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite salário}}
+B --> C[S<=500?]
+C --SIM--> D[novo_salário= S.0.20]
+C --NAO--> E[novo_salário= S.0.10]
+D --> F{{Novo_salário é}}
+E --> G{{Novo_salário é}}
+F --> H([FIM])
+G --> H
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+Algoritmo NovoSalário
+DECLARE S, númerico inteiro
+INICIO
+ESCREVA "Digite salário atual"
+LEIA salário atual
+SE s<=500 ENTÃO
+ Novo_salário= S. 0.20
+SENAO
+ Novo_salário= S.0.10
+FIM_SE
+ESCREVA "O novo salário é ", novo_salário
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (1.0 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+| Salário_atual | Reajuste| S=500 | S<500 | Saída | 
 |      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| S<=500    | S=500= 20%       | S.0.20   |      | "O novo salário é"  |
+| S<=500   | S<500= 10%         |        | S.0.10 | "O novo salário é" |
+
 
 ## Exercício 03 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
