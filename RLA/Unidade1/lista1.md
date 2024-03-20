@@ -89,7 +89,8 @@ B --> C[\n1,n2\]
 C --> D{média=n1+n2/2}
 D --> E[média=>7]
 E --TRUE--> F[aprovado]
-F --FALSE--> G[reprovado]
+E --FALSE--> G[reprovado]
+F --> H[FIM]
 G --> H[FIM]
 ```
 
