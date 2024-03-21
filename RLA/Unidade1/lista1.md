@@ -75,8 +75,8 @@ G --> H
 ```
 Algoritmo NovoSalário
 DECLARE S, númerico inteiro
-INICIO
 ESCREVA "Digite salário atual"
+INICIO
 LEIA salário atual
 SE s<=500 ENTÃO
  Novo_salário= S. 0.20
@@ -141,22 +141,40 @@ Caso não atender a restrição de idade, calcular quantos anos faltam para o ca
 
 #### Fluxograma (1.0 ponto)
 
+
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{"Digite idade"}}
+B --> C{{Idade mínima CNH= 18}}
+C --> D[Idade >=18]
+D --SIM--> E{{"Aprovado"}}
+D --NÃO--> F{{"O candidato não pode tirar a CNH"}}
+F --> G[Idade mínima CNH-Idade do participante]
+G --> H{{"Faltam x anos"}}
+E --> I([FIM])
+H --> I
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE Idade, númerico
+ESCREVA "Digite idade"
+INICIO
+LEIA idade
+DECLARE Idade mínima CNH=18
+SE Idade do participante(IP)>=18, ENTAO
+ ESCREVA "Aprovado"
+SENAO
+ Anos_restantes= Idade mínima CNH(18)-Idade do participante
+ESCREVA "Faltam tantos anos para tirar a carteira da CNH"
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (1.0 ponto)
-
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+| Idade do participante | Idade mínima CNH | Idade>=18 | Idade<18 | Saída | 
 |      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| Idade x    | 18      |Aprovado  |       |  "O candidato pode tirar a CNH"   |
+| Idade y  |  18       |        | 18-idade do participante | "O candidato não pode tirar a CNH"  |
 
