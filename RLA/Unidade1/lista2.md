@@ -56,22 +56,33 @@ Calcule a média de quatro números inteiros dados.
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite quatro números}}
+B --> C{{n1=4,n2=5,n3=6,n4=9}}
+C --> D[Média=n1+n2+n3+n4/4]
+D --> E{{Média=6}}
+E -->F([FIM])
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
 Algoritmo Media
+DECLARE n1,n2,n3,n4, númericos
+ESCREVA "Digite quatro números"
+INICIO
+LEIA quatro números, n1=4,n2=5,n3=6,n4=9
+CONSIDERE média= n1+n2+n3+n4/4
+CALCULE a média, média=4+5+6+9/4= 6
+ESCREVA média=6
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+
+| Números | Média| Cálculo_Média | Saída |  
 |      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| n1=4,n2=5,n3=6,n4=9    | M=n1+n2+n3+n4/4      | M=4+5+6+9/4=    |  "Média=6" |   
 
 ### Exercício 02 (2.5 pontos)
 Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
@@ -129,19 +140,49 @@ Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite idade}}
+B --> C{Idade>=5 ou <=7?}
+C --SIM--> D{{infantil A}}
+C --NÃO--> E{idade>=8 e <=10?}
+E --SIM--> F{{infantil B}}
+E --NÃO--> G{idade>=11 e <=13}
+G --SIM--> H{{juvenil A}}
+G --NAO--> I{idade>=14 e <=17}
+I --SIM--> J{{juvenil B}}
+I --NÃO--> K{{Adulto}}
+D ----> L([FIM])
+F ---> L
+H --> L
+J --> L
+K --> L
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
 Algoritmo ClassificaCategoria
+DECLARE idade inteiro, númerico
+ESCREVA "Digite idade"
+INICIO
+LEIA idade
+SE idade>=5 e <7, ENTAO
+ ESCREVA "infantil A"
+SENAO
+ SE idade >=8 e <=10
+ ESCREVA "infantil B"
+SENAO
+ SE idade >=11 e <=13
+ ESCREVA "juvenil A"
+SENAO
+ SE idade >=14 e <=17
+ ESCREVA "juvenil B"
+SENAO 
+ ESCREVA "adulto"
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+| Idade>=5 e <=7 | >=8 e <=10| >=11 e <=13 | >=14 e <=17 | >=18 | 
 |      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+|  infantil A    | infantil B     | juvenil A   |  juvenil B     | Adulto    |
