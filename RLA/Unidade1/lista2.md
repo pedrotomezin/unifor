@@ -79,10 +79,9 @@ FIM_ALGORITMO
 
 #### Teste de mesa (0.5 ponto)
 
-
-| Números | Média| Cálculo_Média | Saída |  
+  | Números | Média | Cálculo_Média | Saída |  | 
 |      --      |      --      |      --      |      --      |      --      | 
-| n1=4,n2=5,n3=6,n4=9    | M=n1+n2+n3+n4/4      | M=4+5+6+9/4=    |  "Média=6" |   
+| n1=4,n2=5,n3=6,n4=9   |  M=n1+n2+n3+n4/4          |   M=4+5+6+9/4=       | "Média=6" |   |
 
 ### Exercício 02 (2.5 pontos)
 Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
