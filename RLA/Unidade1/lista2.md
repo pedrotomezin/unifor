@@ -1,6 +1,6 @@
 
 # UNIFOR
-**Nome**: Nome do estudante <br>
+**Nome**: Pedro Tomé Saldanha Lopes <br>
 **Disciplina**: Raciocínio lógico algorítmico
 
 ## Exercício exemplo
@@ -125,22 +125,50 @@ O algoritmo deve retornar o resultado da operação selecionada simulando todas 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{"Digite dois números"}}
+B --> C{{n1,n2}}
+C --> D{Operador +}
+D --> E[Soma dos n= n1+n2]
+C --> F{Operador= -}
+F --> G[Subtração dos n= n1-n2]
+C --> H{Operador= *}
+H --> I[Mutiplicação dos n= n1*n2]
+C --> J{Operador= /}
+J --> K[Divisão dos n= n1/n2]
+K --> L[se /0,inexistente]
+E --> M([FIM])
+G --> M
+I --> M
+L --> M
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
 Algoritmo Calculadora
+DECLARE n, númerico, real
+ESCREVA "Digite dois números"
+LEIA n1,n2
+SE o operador for +, ENTAO
+ CALCULE n1+n2
+SE o operador for -, ENTAO
+ CALCULE n1-n2
+SE o operador for *, ENTAO
+ CALCULE n1*n2
+SE o operador for /, ENTAO
+ CALCULE n1/n2
+SE na divisão o denomiador for = 0, ENTÃO
+ ESCREVA "Inexistente"
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| Número_real | Operador= + | Operador= - | Operador= * | Operador= / | n/0 |
+| -- | -- | -- | -- | -- | -- |
+| n1| n1+n2 | n1-n2 | n1*n2 | n1/n2 | "Inexistente" |
+| n2 | n2+n1 | n2-n1 | n2*n1 | n2/n1 | “Inexistente“ |
+
 
 ### Exercício 04 (2.5 pontos)
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
