@@ -90,22 +90,32 @@ Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{"Digite temperatura em Celsius (C)"}}
+B --> C{{Temperatura em Celsius= 35 Graus}} 
+C --> D[Temperatura Celsius C -> Fahreinheit F= F = 9/5 * C + 32]
+D --> E[Temperatura em Fahreinheit= 95F]
+E --> F([FIM])
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
 Algoritmo ConverteCelsiusFarenheit
+DECLARE Temperatura, númerico
+ESCREVA "Digite temperatura em Celsius (C)"
+INICIO
+LEIA temperatura em Celsius (C°), C= 35 Graus
+CALCULE a temperatura para Fahreinheit (F), usando o módulo: F= F = 9/5 * C + 32
+LEIA temperatura em Fahreinheit
+ESCREVA "Temperatura em Fahreinheit é 95F"
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
-
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+| Temperatura em Celsius C° | Módulo temperatura em Fahreinheit F°  | Temperatura em Fahreinheit | Saída |  | 
 |      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+|
+| 35° graus   |   F= F = 9/5 * C + 32  | 95°F | "Temperatura em Fahreinheit é 95F" |   |
 
 ### Exercício 03 (2.5 pontos)
 Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
