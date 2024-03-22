@@ -103,6 +103,18 @@ K --LOOP--> F
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE n, num, inteiros
+ESCREVA "Digite o número de alunos"
+LEIA n
+DECLARE i=1
+SE i <=n, ENTAO
+ ESCREVA "Digite a nota do aluno, i"
+ LEIA nota 
+ SE nota >=50 e nota <=100, cont=+1
+ SENAO
+ ESCREVA i=+1, LOOP --> linha 6
+SENAO
+ESCREVA "Número de alunos aprovados: cont"
 FIM_ALGORITMO
 ```
 
