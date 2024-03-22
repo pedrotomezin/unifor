@@ -1,5 +1,5 @@
 # UNIFOR
-**Nome**: Nome do estudante <br>
+**Nome**: Pedro Tomé Saldanha Lopes <br>
 **Disciplina**: Raciocínio lógico algorítmico
 
 ## Lista de exercícios 01
