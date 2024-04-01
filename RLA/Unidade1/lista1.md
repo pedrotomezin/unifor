@@ -132,8 +132,8 @@ FIM_ALGORITMO
 
 | números | Média | Aprovado | Reprovado | Saída |
 | -- | -- | -- | -- | -- | 
-| N1 | M=>7 | n1+n2/2 =>7  |   | "Aprovado" |
-| N2 | M=>7 | | N1+n2/2 <7 | "Reprovado" |
+| 8 e 9 | M=>7 | M= 8+9/2= 8,5  |   | "Aprovado" |
+| 6 e 5 | M=>7 | |M =6+5/2= 5,5  | "Reprovado" |
 
 ## Exercício 04 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. 
@@ -163,12 +163,12 @@ DECLARE Idade, númerico
 ESCREVA "Digite idade"
 INICIO
 LEIA idade
-DECLARE Idade mínima CNH=18                       
+DECLARE Idade mínima CNH=18  (IM)                     
 SE Idade do participante >=18, ENTAO
  ESCREVA "Aprovado"
 SENAO
- Anos_restantes= Idade mínima CNH(18)-Idade do participante
-ESCREVA "Faltam tantos anos para tirar a carteira da CNH"
+ Anos_restantes= Idade mínima CNH(IM)-Idade do participante(IP)
+ESCREVA "O candidato não pode tirar a CNH", "Faltam (IM-IP) anos para tirar a carteira da CNH"
 FIM_ALGORITMO
 ```
 
