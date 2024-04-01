@@ -91,8 +91,8 @@ FIM_ALGORITMO
 
 | Salário_atual | Reajuste| S=500 | S<500 | Saída | 
 |      --      |      --      |      --      |      --      |      --      | 
-| S<=500    | S=500= 20%       | S.0.20   |      | "O novo salário é"  |
-| S<=500   | S<500= 10%         |        | S.0.10 | "O novo salário é" |
+| S=500    | S=500= 20%       | S.0.20   |      | "O novo salário é"  |
+| S<500   | S<500= 10%         |        | S.0.10 | "O novo salário é" |
 
 
 ## Exercício 03 (3 pontos)
