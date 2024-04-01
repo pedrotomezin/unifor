@@ -163,8 +163,8 @@ DECLARE Idade, númerico
 ESCREVA "Digite idade"
 INICIO
 LEIA idade
-DECLARE Idade mínima CNH=18
-SE Idade do participante(IP)>=18, ENTAO
+DECLARE Idade mínima CNH=18                       
+SE Idade do participante >=18, ENTAO
  ESCREVA "Aprovado"
 SENAO
  Anos_restantes= Idade mínima CNH(18)-Idade do participante
@@ -175,6 +175,6 @@ FIM_ALGORITMO
 #### Teste de mesa (1.0 ponto)
 | Idade do participante | Idade mínima CNH | Idade>=18 | Idade<18 | Saída | 
 |      --      |      --      |      --      |      --      |      --      | 
-| Idade x    | 18      |Aprovado  |       |  "O candidato pode tirar a CNH"   |
-| Idade y  |  18       |        | 18-idade do participante | "O candidato não pode tirar a CNH"  |
+| Idade= 20    | =>18      |Aprovado  |       |  "O candidato pode tirar a CNH"   |-
+| Idade= 16  |  =>18       |        | 18-idade do participante= 18-16  | "O candidato não pode tirar a CNH" "Faltam 2 anos"|
 
