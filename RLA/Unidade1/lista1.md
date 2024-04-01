@@ -62,8 +62,8 @@ Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 ter�
 flowchart TD
 A([INICIO]) --> B{{Digite salário}}
 B --> C[S<=500?]
-C --SIM--> D[novo_salário= S.0.20]
-C --NAO--> E[novo_salário= S.0.10]
+C --SIM--> D[novo_salário= S.0x20]
+C --NAO--> E[novo_salário= S.0x10]
 D --> F{{Novo_salário é}}
 E --> G{{Novo_salário é}}
 F --> H([FIM])
