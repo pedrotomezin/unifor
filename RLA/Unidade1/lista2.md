@@ -101,7 +101,7 @@ E --> F([FIM])
 
 ```
 Algoritmo ConverteCelsiusFarenheit
-DECLARE Temperatura, númerico
+DECLARE Temperatura, númerico, real
 ESCREVA "Digite temperatura em Celsius (C)"
 INICIO
 LEIA temperatura em Celsius (C°), C= 35 Graus
@@ -112,10 +112,7 @@ FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
-| Temperatura em Celsius C° | Módulo temperatura em Fahreinheit F°  | Temperatura em Fahreinheit | Saída |  | 
-|      --      |      --      |      --      |      --      |      --      | 
-|
-| 35° graus   |   F= F = 9/5 * C + 32  | 95°F | "Temperatura em Fahreinheit é 95F" |   |
+
 
 ### Exercício 03 (2.5 pontos)
 Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
@@ -219,7 +216,10 @@ FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
-
-| Idade>=5 e <=7 | >=8 e <=10| >=11 e <=13 | >=14 e <=17 | >=18 | 
-|      --      |      --      |      --      |      --      |      --      | 
-|  infantil A    | infantil B     | juvenil A   |  juvenil B     | Adulto    |
+ | Idade   | Idade >=5 e <=7   | idade >=8 e <=10  | Idade >=11 e <=13  | Idade >=14 e <=17   | Idade =>18 |Saída  |
+ | -- |  -- | -- | -- | -- |  -- | --|
+ |6   | V    |  F   | F  |   F |  F   |Infantil A   |
+ |8   |  F   |  V   | F  | F   |  F   | Infantil B  |
+ |12   |   F  |   F  |  V  |  F  |   F  | Juvenil A  |
+ |16   |  F   | F    | F  | V   | F    | Juvenil B  |
+ |20   |   F  |  F   | F  |   F | V    | Adulto  |
