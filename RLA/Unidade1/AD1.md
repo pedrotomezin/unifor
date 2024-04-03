@@ -69,10 +69,10 @@ DECLARE a,b,axu: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // Dados de entrada do usuário, armazenados em uma variável "a"
     ESCREVA "Digite o valor da a:"
 
-    // Insira seu comentário
+    // Dados da variável armazenados 
     LEIA a
 
     // Insira seu comentário
