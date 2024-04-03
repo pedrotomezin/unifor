@@ -77,28 +77,28 @@ DECLARE num1, num2, num3, num4: REAL
 
 INICIO
 
-    // Instrução de atribuição para armazenar um dado númerico ao algoritmo
+    // Dados de entrada do usuário, armazenados em uma variável, num1
     ESCREVA "Digite o número 1:"
 
-    // Instrução de entrada para armazenar um dado númerico ao algoritmo
+    // Dados de entrada do usuário, armazenados em uma variável, num1
     LEIA num1
 
-    // Instrução de atribuição para armazenar um dado númerico ao algoritmo
+    // Dados de entrada do usuário, armazenados em uma variável, num2
     ESCREVA "Digite o número 2:"
 
-    // Instrução de entrada para armazenar um dado númerico ao algoritmo
+    // Dados de entrada do usuário, armazenados em uma variável, num2
     LEIA num2
 
-    // Instrução de atribuição para armazenar um dado númerico ao algoritmo
+    // Dados de entrada do usuário, armazenados em uma variável, num3
     ESCREVA "Digite o número 3:"
 
-    // Instrução de entrada para armazenar um dado númerico ao algoritmo
+    // Dados de entrada do usuário, armazenados em uma variável, num3
     LEIA num3
 
-    // Instrução de atribuição para armazenar um dado númerico ao algoritmo
+    // Dados de entrada do usuário, armazenados em uma variável, num4
     ESCREVA "Digite o número 4:"
 
-    // Instrução de entrada para armazenar um dado númerico ao algoritmo
+    // Dados de entrada do usuário, armazenados em uma variável, num4
     LEIA num4
 
     // Instrução de atribuição onde, os dados dos números armazenados irão realizar uma média aritmética para obtenção dos resultados
