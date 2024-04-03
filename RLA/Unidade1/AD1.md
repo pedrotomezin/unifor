@@ -72,7 +72,7 @@ INICIO
     // Dados de entrada do usuário, armazenados em uma variável "a"
     ESCREVA "Digite o valor da a:"
 
-    // Dados da variável armazenados 
+    // Dados da variável armazenados
     LEIA a
 
     // Insira seu comentário
