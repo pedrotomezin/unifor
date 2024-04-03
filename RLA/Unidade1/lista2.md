@@ -56,32 +56,64 @@ Calcule a média de quatro números inteiros dados.
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{Digite quatro números}}
-B --> C{{n1=4,n2=5,n3=6,n4=9}}
-C --> D[Média=n1+n2+n3+n4/4]
-D --> E{{Média=6}}
-E -->F([FIM])
+A([INICIO]) --> B{{"Digite o número 1:"}}
+B --> C[/num1/]
+C --> D{{"Digite o número 2:"}}
+D --> E[/num2/]
+E --> F{{"Digite o número 3:"}}
+F --> G[/num3/]
+G --> H{{"Digite o número 2:"}}
+H --> I[/num4/]
+I --> J["media = (num1 + num2 + num3 + num4)/4"]
+J --> K{{A média é, media}}
+K --> L([FIM]) 
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
-```
-Algoritmo Media
-DECLARE n1,n2,n3,n4, númericos
-ESCREVA "Digite quatro números"
+```java
+ALGORTIMO Media
+DECLARE num1, num2, num3, num4: REAL
+
 INICIO
-LEIA quatro números, n1=4,n2=5,n3=6,n4=9
-CONSIDERE média= n1+n2+n3+n4/4
-CALCULE a média, média=4+5+6+9/4= 6
-ESCREVA média=6
-FIM_ALGORITMO
+
+    // Instrução de atribuição para armazenar um dado númerico ao algoritmo
+    ESCREVA "Digite o número 1:"
+
+    // Instrução de entrada para armazenar um dado númerico ao algoritmo
+    LEIA num1
+
+    // Instrução de atribuição para armazenar um dado númerico ao algoritmo
+    ESCREVA "Digite o número 2:"
+
+    // Instrução de entrada para armazenar um dado númerico ao algoritmo
+    LEIA num2
+
+    // Instrução de atribuição para armazenar um dado númerico ao algoritmo
+    ESCREVA "Digite o número 3:"
+
+    // Instrução de entrada para armazenar um dado númerico ao algoritmo
+    LEIA num3
+
+    // Instrução de atribuição para armazenar um dado númerico ao algoritmo
+    ESCREVA "Digite o número 4:"
+
+    // Instrução de entrada para armazenar um dado númerico ao algoritmo
+    LEIA num4
+
+    // Instrução de atribuição onde, os dados dos números armazenados irão realizar uma média aritmética para obtenção dos resultados
+    media <- (num1 + num2 + num3 + num4)/4
+    ESCREVA "A média é", media
+
+FIM
 ```
+
 
 #### Teste de mesa (0.5 ponto)
 
-  | Números | Média | Cálculo_Média | Saída |  | 
-|      --      |      --      |      --      |      --      |      --      | 
-| n1=4,n2=5,n3=6,n4=9   |  M=n1+n2+n3+n4/4          |   M=4+5+6+9/4=       | "Média=6" |   |
+ | num1 | num2 | num3 | num4 | saída | 
+| --   | --   | --   | --   | --    | 
+| 0.25 | 0.25 | 2.50 | 1.00 | 1.00  | 
 
 ### Exercício 02 (2.5 pontos)
 Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
@@ -90,29 +122,41 @@ Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{"Digite temperatura em Celsius (C)"}}
-B --> C{{Temperatura em Celsius= 35 Graus}} 
-C --> D[Temperatura Celsius C -> Fahreinheit F= F = 9/5 * C + 32]
-D --> E[Temperatura em Fahreinheit= 95F]
+A([INICIO]) --> B{{"Digite a temperatura em Celisus:"}}
+B --> C[/C/]
+C --> D["F = (9/5) * C + 32"]
+D --> E{{A temperatura em Fahrenheit é, F, graus}}
 E --> F([FIM])
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
-```
-Algoritmo ConverteCelsiusFarenheit
-DECLARE Temperatura, númerico, real
-ESCREVA "Digite temperatura em Celsius (C)"
+```java
+ALGORTIMO ConverteCelsiusFarenheit
+DECLARE C, F: REAL
+
 INICIO
-LEIA temperatura em Celsius (C°), C= 35 Graus
-CALCULE a temperatura para Fahreinheit (F), usando o módulo: F= F = 9/5 * C + 32
-LEIA temperatura em Fahreinheit
-ESCREVA "Temperatura em Fahreinheit é 95F"
-FIM_ALGORITMO
+
+    // 
+    ESCREVA "Digite a temperatura em Celisus:"
+
+    // Insira seu comentário
+    LEIA C
+
+    // Insira seu comentário
+    F <- (9/5) * C + 32
+
+    // Insira seu comentário
+    ESCREVA "A temperatura em Fahrenheit é", F, "graus"
+
+FIM
 ```
 
 #### Teste de mesa (0.5 ponto)
 
+| C  | F  | saída                                  | 
+| -- | -- | --                                     |
+| 0  | 32 | A temperatura em Fahrenheit é 32 graus |
 
 ### Exercício 03 (2.5 pontos)
 Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
@@ -174,52 +218,91 @@ Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{Digite idade}}
-B --> C{Idade>=5 ou <=7?}
-C --SIM--> D{{infantil A}}
-C --NÃO--> E{idade>=8 e <=10?}
-E --SIM--> F{{infantil B}}
-E --NÃO--> G{idade>=11 e <=13}
-G --SIM--> H{{juvenil A}}
-G --NAO--> I{idade>=14 e <=17}
-I --SIM--> J{{juvenil B}}
-I --NÃO--> K{{Adulto}}
-D ----> L([FIM])
-F ---> L
-H --> L
-J --> L
-K --> L
+A([INICIO]) --> B{{"Digite a idade do aluno:"}}
+B --> C[/idade/]
+C --> D{idade >=5 <br>E <br>idade <= 7}
+D --FALSE--> F{idade >=8 <br>E <br>idade <= 10}
+F --FALSE--> G{idade >=11 <br>E <br>idade <= 13}
+G --FALSE--> H{idade >=14 <br>E <br>idade <= 17}
+H --FALSE--> I{idade >=18}
+I --FALSE--> P{{"Digite uma idade válida!"}}
+P --> Z([FIM])
+D --TRUE--> Q{{Infantial A}}
+F --TRUE--> K{{"Infantial B"}}
+G --TRUE--> L{{Juvenil A}}
+H --TRUE--> M{{Juvenil B}}
+I --TRUE--> N{{Adulto}}
+Q --> Z
+K --> Z
+L --> Z
+M --> Z
+N --> Z
 ```
-
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ClassificaCategoria
-DECLARE idade inteiro, númerico
-ESCREVA "Digite idade"
+ALGORTIMO ClassificaCategoria
+DECLARE idade: INTEIRO
+
 INICIO
-LEIA idade
-SE idade>=5 e <7, ENTAO
- ESCREVA "infantil A"
-SENAO
- SE idade >=8 e <=10
- ESCREVA "infantil B"
-SENAO
- SE idade >=11 e <=13
- ESCREVA "juvenil A"
-SENAO
- SE idade >=14 e <=17
- ESCREVA "juvenil B"
-SENAO 
- ESCREVA "adulto"
-FIM_ALGORITMO
+
+    // Instrução de entrada ao algoritmo para armazenar um dado de entrada númerico
+    ESCREVA "Digite a idade do aluno:"
+
+    // 
+    LEIA idade
+
+    // Insira seu comentário
+    ESCOLHA
+
+        // Insira seu comentário
+        CASO idade >=5 E idade <= 7
+
+            // Insira seu comentário
+            ESCREVA "Infantial A"
+
+        // Insira seu comentário
+        CASO idade >=8 E idade <= 10
+
+            // Insira seu comentário
+            ESCREVA "Infantial B"
+
+        // Insira seu comentário
+        CASO idade >=11 E idade <= 13
+
+            // Insira seu comentário
+            ESCREVA "Juvenil A"
+
+        // Insira seu comentário
+        CASO idade >=14 E idade <= 17
+
+            // Insira seu comentário
+            ESCREVA "Juvenil B"
+
+        // Insira seu comentário
+        CASO idade >=18
+
+            // Insira seu comentário
+            ESCREVA "Adulto"
+
+    // Insira seu comentário
+    SENAO
+
+        // Insira seu comentário
+        ESCREVA "Digite uma idade válida!"
+
+    FIM_ESCOLHA
+
+FIM
 ```
 
+
 #### Teste de mesa (0.5 ponto)
- | Idade   | Idade >=5 e <=7   | idade >=8 e <=10  | Idade >=11 e <=13  | Idade >=14 e <=17   | Idade =>18 |Saída  |
- | -- |  -- | -- | -- | -- |  -- | --|
- |6   | V    |  F   | F  |   F |  F   |Infantil A   |
- |8   |  F   |  V   | F  | F   |  F   | Infantil B  |
- |12   |   F  |   F  |  V  |  F  |   F  | Juvenil A  |
- |16   |  F   | F    | F  | V   | F    | Juvenil B  |
- |20   |   F  |  F   | F  |   F | V    | Adulto  |
+| idade | idade >=8 E idade <= 10 | idade >=11 E idade <= 13 | idade >=14 E idade <= 17 | idade >=18 | saída                       | 
+| --    | --                      | --                       | --                       | --         | --                          |
+| 4     | False                   | False                    | False                    | False      | Digite uma idade válida!    |
+| -4    | False                   | False                    | False                    | False      | Digite uma idade válida!    |
+| 8     | True                    | False                    | False                    | False      | Infantial A                 |
+| 11    | False                   | True                     | False                    | False      | Infantial B                 |
+| 17    | False                   | False                    | True                     | False      | Infantial C                 |
+| 21    | False                   | False                    | False                    | True       | Adulto                      |
