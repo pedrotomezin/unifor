@@ -222,55 +222,55 @@ INICIO
     ESCREVA "Digite outro número:"
     LEIA num2
 
-    // Insira seu comentário
+    // Variável de escolha, dependendo de qual operador usuário escolheu
     ESCOLHA
 
-        // Insira seu comentário
+        // Executa o comando caso o usuário tenha escolhido a op 1
         CASO op == 1
 
-            // Insira seu comentário
+            // Calcula o comando da váriavel op 1
             res = num1 + num2
 
-            // Insira seu comentário
+            // Exibe o resultado da operação ao usuário
             ESCREVA num1, "+", num2, "=", res
 
-        // Insira seu comentário
+        // Executa o comando caso o usuário tenha escolhido a op 2
         CASO op == 2
 
-            // Insira seu comentário
+            // Calcula o comando da váriavel op 2
             res = num1 - num2
 
             // Insira seu comentário
             ESCREVA num1, "-", num2, "=", res
 
-        // Insira seu comentário
+        //  Executa o comando caso o usuário tenha escolhido a op 3
         CASO op == 3
 
-            // Insira seu comentário
+            // Calcula o comando da váriavel op 3
             res = num1 * num2
 
             // Insira seu comentário
             ESCREVA num1, "*", num2, "=", res
 
-        // Insira seu comentário
+        //  Executa o comando caso o usuário tenha escolhido a op 4
         CASO op == 4
 
             // Insira seu comentário
             SE num2 != 0 ENTAO
 
-                // Insira seu comentário
+                // Calcula o comando da váriavel op 4
                 res = num1 / num2
 
                 // Insira seu comentário
                 ESCREVA num1, "/", num2, "=", res
 
-            // Insira seu comentário
+            // Se a variável num2 for 0, não dara para fazer a equação, logo exibira na tela a mensagem "Impossível dividir!"
             SENAO
                 ESCREVA "Impossível dividir!"
 
             FIM_SE
 
-    // Insira seu comentário
+    // Não executa o comando, caso o usuário tenha escolhido alguma operação que não esteja presente das quais foram estabelecidas como variáveis no comando
     SENAO
         ESCREVA "Operação inválida!"
 
@@ -327,49 +327,49 @@ DECLARE idade: INTEIRO
 
 INICIO
 
-    // Instrução de entrada ao algoritmo para armazenar um dado de entrada númerico
+    // Dados de entrada do usuário, armazenados em uma variável como "Idade"
     ESCREVA "Digite a idade do aluno:"
 
-    // 
+    // Armazena os dados da variável no sistema
     LEIA idade
 
-    // Insira seu comentário
+    // Estrutura de decisão, para decidir como a variável "idade" ira se encaixar em qual dos módulos
     ESCOLHA
 
-        // Insira seu comentário
+        // Executa o comando, sob a condição de: 
         CASO idade >=5 E idade <= 7
 
-            // Insira seu comentário
+            // Exibe a mensagem na tela: 
             ESCREVA "Infantial A"
 
-        // Insira seu comentário
+        // Executa o comando, sob a condição de:
         CASO idade >=8 E idade <= 10
 
-            // Insira seu comentário
+            //  Exibe a mensagem na tela:
             ESCREVA "Infantial B"
 
-        // Insira seu comentário
+        // Executa o comando, sob a condição de:
         CASO idade >=11 E idade <= 13
 
-            // Insira seu comentário
+            //  Exibe a mensagem na tela:
             ESCREVA "Juvenil A"
 
-        // Insira seu comentário
+        // Executa o comando, sob a condição de:
         CASO idade >=14 E idade <= 17
 
-            // Insira seu comentário
+            //  Exibe a mensagem na tela:
             ESCREVA "Juvenil B"
 
-        // Insira seu comentário
+        // Executa o comando, sob a condição de:
         CASO idade >=18
 
-            // Insira seu comentário
+            //  Exibe a mensagem na tela:
             ESCREVA "Adulto"
 
-    // Insira seu comentário
+    // Caso idade não corresponder a nenhuma das opções de variáveis
     SENAO
 
-        // Insira seu comentário
+        // Exibe a mensagem na tela
         ESCREVA "Digite uma idade válida!"
 
     FIM_ESCOLHA
