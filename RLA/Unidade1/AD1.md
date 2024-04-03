@@ -63,10 +63,40 @@ I --> J{{"b =", b}}
 
 #### Pseudocódigo (0.5 ponto)
 
+```java
+ALGORTIMO TrocaValores
+DECLARE a,b,axu: REAL
+
+INICIO
+
+    // Insira seu comentário
+    ESCREVA "Digite o valor da a:"
+
+    // Insira seu comentário
+    LEIA a
+
+    // Insira seu comentário
+    ESCREVA "Digite o valor da b:"
+
+    // Insira seu comentário
+    LEIA b
+
+    // Insira seu comentário
+    aux <- a 
+
+    // Insira seu comentário
+    a <- b
+
+    // Insira seu comentário
+    b <- aux
+
+    // Insira seu comentário
+    ESCREVA "a=", a
+    ESCREVA "b=", b
+
+FIM
 ```
-Algoritmo TrocaValores
-FIM_ALGORITMO
-```
+
 
 #### Teste de mesa (0.25 ponto)
 
@@ -101,22 +131,46 @@ K --LOOP--> F
 
 #### Pseudocódigo (0.5 ponto)
 
+```java
+ALGORTIMO ContaAprovacoes
+DECLARE n, cont, nota, i: INTEIRO
+
+INICIO
+
+    // Insira seu comentário
+    ESCREVA "Digite a quantidade de notas dos alunos:"
+
+    // Insira seu comentário
+    LEIA n
+
+    // Insira seu comentário
+    cont = 0 
+
+    // Insira seu comentário
+    PARA i DE 1 ATE n FAÇA
+
+        // Insira seu comentário
+        ESCREVA "Digite a nota do aluno", i, ":"
+
+        // Insira seu comentário
+        LEIA nota
+
+        // Insira seu comentário
+        SE nota >= 50 E nota <= 100 ENTAO
+
+            // Insira seu comentário
+            cont = cont + 1 
+
+        FIM_SE
+
+    FIM_PARA
+
+    // Insira seu comentário
+    ESCREVA "O numero de alunos aprovados e:", cont
+
+FIM
 ```
-Algoritmo ContaAprovacoes
-DECLARE n, num, inteiros
-ESCREVA "Digite o número de alunos"
-LEIA n
-DECLARE i=1
-SE i <=n, ENTAO
- ESCREVA "Digite a nota do aluno, i"
- LEIA nota 
- SE nota >=50 e nota <=100, cont=+1
- SENAO
- ESCREVA i=+1, LOOP --> linha 6
-SENAO
-ESCREVA "Número de alunos aprovados: cont"
-FIM_ALGORITMO
-```
+
 
 #### Teste de mesa (0.25 ponto)
 
@@ -155,9 +209,52 @@ K --LOOP--> G
 
 #### Pseudocódigo (0.5 ponto)
 
-```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
+```java
+Algoritmo SomaNumeros
+DECLARE n,i,soma: INTEIRO
+
+INICIO
+
+    // Insira seu comentário
+    ESCREVA "Digite a quantidade de números<br> (n >= 0):"
+    LEIA n
+
+    // Insira seu comentário
+    SE n >=0 ENTAO
+
+        // Insira seu comentário
+        soma <- 0
+
+        // Insira seu comentário
+        i <- i
+
+        // Insira seu comentário
+        ENQUANTO i <= n FAÇA
+
+            // Insira seu comentário
+            ESCREVA "Digite um número:"
+
+            // Insira seu comentário
+            LEIA num 
+
+            // Insira seu comentário
+            soma <- soma + num
+
+            // Insira seu comentário
+            i <- i + 1
+
+        FIM_ENQUANTO
+
+    // Insira seu comentário
+    SENAO
+        "O valor deve ser maior ou igual a zero!"
+
+    FIM_SE
+
+    // Insira seu comentário
+    ESCREVA "A soma dos numeros é , soma"
+
+FIM
 ```
 
 #### Teste de mesa (0.25 ponto)
@@ -197,9 +294,42 @@ I --LOOP--> E
 
 #### Pseudocódigo (0.5 ponto)
 
-```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
+```java
+Algoritmo SomaSerie
+DECLARE n,numerador,denominador: INTEIRO; termo, S: REAL
+
+INICIO
+
+    // Insira seu comentário
+    ESCREVA "Digite o número de termos da série S:"
+
+    // Insira seu comentário
+    LEIA n
+
+    // Insira seu comentário
+    S <- 0
+
+    // Insira seu comentário
+    PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
+
+        // Insira seu comentário
+        numerador = 2 * i + 1
+
+        // Insira seu comentário
+        denominador <- 2 * i + 2
+
+        // Insira seu comentário
+        termo = numerador / denominador
+
+        // Insira seu comentário
+        S += termo
+
+    FIM_PARA
+
+    // Insira seu comentário
+    ESCREVA "Soma da série S é ", S
+
+FIM
 ```
 
 #### Teste de mesa (0.25 ponto)
@@ -235,9 +365,41 @@ H --> I
 
 #### Pseudocódigo (1.0 ponto)
 
-```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
+```java
+ALGORITMO CalcFatorial
+DECLARE n: INTEIRO
+
+INICIO
+
+    // Insira seu comentário
+    ESCREVA "Digite um numero inteiro nao-negativo:"
+
+    // Insira seu comentário
+    LEIA n
+
+    // Insira seu comentário
+    SE n >= 0 ENTAO
+
+        // Insira seu comentário
+        fator <- 1
+
+        // Insira seu comentário
+        PARA i DE 1 ATÉ n PASSO 1 FAÇA
+
+            // Insira seu comentário
+            fator <- fator * i        // fator *= i
+
+        FIM_PARA
+
+        // Insira seu comentário
+        ESCREVA "O fatorial de, n, é:", fator
+
+    // Insira seu comentário
+    SENAO
+        ESCREVA "O valor deve ser maior ou igual a zero!"
+    FIM_SE
+
+FIM
 ```
 
 #### Teste de mesa (0.5 ponto)
@@ -272,10 +434,44 @@ I --LOOP--> E
 ```
 #### Pseudocódigo (1.0 ponto)
 
+```java
+ALGORITMO GeraFibonacci
+DECLARE n, a, b, termo_atual: INTEIRO
+
+INICIO
+
+    // Insira seu comentário
+    ESCREVA "Número de termos da série Fibonacci:"
+
+    // Insira seu comentário
+    LEIA n
+
+    // Insira seu comentário
+    a <- 0
+
+    // Insira seu comentário
+    b <- 1
+
+    // Insira seu comentário
+    PARA i DE 1 ATE n FAÇA
+
+        // Insira seu comentário
+        ESCREVA a
+
+        // Insira seu comentário
+        termo_atual <- a + b
+
+        // Insira seu comentário
+        a <- b
+
+        // Insira seu comentário
+        b <- termo_atual
+
+    FIM_PARA
+FIM
+
 ```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
-```
+
 #### Teste de mesa (0.5 ponto)
 
 | it | n  | a  | b  | i  | saída | termo_atual = a + b | a = b | b = termo_atual |
@@ -311,10 +507,48 @@ E --> W
 
 #### Pseudocódigo (1.0 ponto)
 
+```java
+Algoritmo InverteInteiro
+DECLARE num, num_inv, digito: INTEIRO
+
+INICIO
+
+    // Insira seu comentário
+    ESCREVA "Digite o número a ser invertido:"
+    LEIA num
+
+    // Insira seu comentário
+    SE num < 0 ENTAO
+
+        // Insira seu comentário
+        ESCREVA "O número deve ser positivo!"
+
+    // Insira seu comentário
+    SENAO
+
+        // Insira seu comentário
+        num_inv <- 0
+
+        // Insira seu comentário
+        ENQUANTO num > 0 FAÇA
+
+            // Insira seu comentário
+            digito <- num % 10
+
+            // Insira seu comentário
+            num_inv <- (num_inv * 10) + digito
+
+            // Insira seu comentário
+            num <- num // 10
+
+        // Insira seu comentário
+        ESCREVA "Número invertido:", num_inv
+
+    FIM_SE
+
+FIM
 ```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
-```
+
 
 #### Teste de mesa (0.5 ponto)
 
