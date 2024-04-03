@@ -101,7 +101,7 @@ INICIO
     // Dados de entrada do usuário, armazenados em uma variável, num4
     LEIA num4
 
-    // Instrução de atribuição onde, os dados dos números armazenados irão realizar uma média aritmética para obtenção dos resultados
+    // Calcula a média das quatro variáveis num
     media <- (num1 + num2 + num3 + num4)/4
     ESCREVA "A média é", media
 
@@ -205,20 +205,20 @@ DECLARE op: INTEIRO; num1,num2,res: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // Dados de entrada ao algoritmo, atribuindo as operações como variáveis númericas
     ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
 
-    // Insira seu comentário
+    // Dados de entrada do usuário, armazenando em uma outra variável, op
     ESCREVA "Digite uma operação:"
 
-    // Insira seu comentário
+    // Armazenamento dos dados de entrada da variável, op
     LEIA op
 
-    // Insira seu comentário
+    // Dados de entrada do usuário, armazenando em uma outra variável, num 1
     ESCREVA "Digite um número:"
     LEIA num1
 
-    // Insira seu comentário
+    //  Dados de entrada do usuário, armazenando em uma outra variável, num 2
     ESCREVA "Digite outro número:"
     LEIA num2
 
