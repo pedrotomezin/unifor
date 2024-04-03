@@ -440,22 +440,22 @@ DECLARE n, a, b, termo_atual: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Dados de entrada do usuario adicionados a uma variável n
     ESCREVA "Número de termos da série Fibonacci:"
 
-    // Insira seu comentário
+    // Armazena os dados da variável n
     LEIA n
 
-    // Insira seu comentário
+    // Adiciona um valor numerico a variável a
     a <- 0
 
-    // Insira seu comentário
+    // Adiciona um valor númerico a variável b
     b <- 1
 
-    // Insira seu comentário
+    // Loop condicional 
     PARA i DE 1 ATE n FAÇA
 
-        // Insira seu comentário
+        // Dados de entrada da variável a 
         ESCREVA a
 
         // Insira seu comentário
