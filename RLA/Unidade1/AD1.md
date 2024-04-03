@@ -228,19 +228,19 @@ INICIO
         // Inicialização da variável i com valor atribuido =1
         i <- i
 
-        // Insira seu comentário
+        // Executa o comando enquanto i <=N
         ENQUANTO i <= n FAÇA
 
-            // Insira seu comentário
+            // Dados de entrada armazenado em uma variável num
             ESCREVA "Digite um número:"
 
-            // Insira seu comentário
+            // Dados da variável num armazenados
             LEIA num 
 
-            // Insira seu comentário
+            // Calcula o novo valor de soma
             soma <- soma + num
 
-            // Insira seu comentário
+            // Calcula o novo valor de i
             i <- i + 1
 
         FIM_ENQUANTO
@@ -383,7 +383,7 @@ INICIO
         // Inicialização da variável Fator como 1
         fator <- 1
 
-        // Loop condicional, executa as instruções até um valor indeterminado
+        // Loop contado
         PARA i DE 1 ATÉ n PASSO 1 FAÇA
 
             // Calcula o resultado de fator
