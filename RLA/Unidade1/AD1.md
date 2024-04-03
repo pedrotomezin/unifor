@@ -513,35 +513,35 @@ DECLARE num, num_inv, digito: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Dados de entrada armazenados em uma variável num
     ESCREVA "Digite o número a ser invertido:"
     LEIA num
 
-    // Insira seu comentário
+    // Condição que irá executar o código conforme o que se pede
     SE num < 0 ENTAO
 
-        // Insira seu comentário
+        // Mensagem de saída exibida caso condição num < 0
         ESCREVA "O número deve ser positivo!"
 
-    // Insira seu comentário
+    // Condição de negação caso a variável num não se encaixe no requisito da condição anterior
     SENAO
 
-        // Insira seu comentário
+        // Nova condição 
         num_inv <- 0
 
-        // Insira seu comentário
+        // Loop condicional caso condição num > 0
         ENQUANTO num > 0 FAÇA
 
-            // Insira seu comentário
+            // Calcula a variável num por 10
             digito <- num % 10
 
-            // Insira seu comentário
+            // Calcula o valor da variável num_inv
             num_inv <- (num_inv * 10) + digito
 
-            // Insira seu comentário
+            // Novo valor sera adicionado a variável num
             num <- num // 10
 
-        // Insira seu comentário
+        // Exibe mensagem de saída na tela do resultado da variável num_inv
         ESCREVA "Número invertido:", num_inv
 
     FIM_SE
