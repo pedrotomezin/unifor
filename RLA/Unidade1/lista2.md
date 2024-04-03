@@ -137,16 +137,16 @@ DECLARE C, F: REAL
 
 INICIO
 
-    // 
+    // Instrução de saída, que exibe mensagem ao usuário para adicionar um dado de entrada ao algoritmo
     ESCREVA "Digite a temperatura em Celisus:"
 
-    // Insira seu comentário
+    // Instrução de entrada, que armarzena o dado anterior 
     LEIA C
 
-    // Insira seu comentário
+    // Instrução de atribuição a uma variável aritmética, para transformar uma temperatura em Celsius para Farenheit
     F <- (9/5) * C + 32
 
-    // Insira seu comentário
+    // Mensagem de saída, após o cálculo da variável 
     ESCREVA "A temperatura em Fahrenheit é", F, "graus"
 
 FIM
@@ -164,51 +164,132 @@ O algoritmo deve retornar o resultado da operação selecionada simulando todas 
 
 #### Fluxograma (1.0 ponto)
 
+
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{"Digite dois números"}}
-B --> C{{n1,n2}}
-C --> D{Operador +}
-D --> E[Soma dos n= n1+n2]
-C --> F{Operador= -}
-F --> G[Subtração dos n= n1-n2]
-C --> H{Operador= *}
-H --> I[Mutiplicação dos n= n1*n2]
-C --> J{Operador= /}
-J --> K[Divisão dos n= n1/n2]
-K --> L[se /0,inexistente]
-E --> M([FIM])
-G --> M
-I --> M
-L --> M
+A([INICIO]) --> B{{"Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"}}
+B --> C{{Digite uma operação:}}
+C --> D[/op/]
+D --> E{{Digite um número:}}
+E --> F[/num1/]
+F --> G{{Digite outro número:}}
+G --> H[/num2/]
+H --> I{op == 1}
+I --FALSE--> J{op == 2}
+J --FALSE--> L{op == 3}
+L --FALSE--> O{op == 4}
+O --FALSE--> Q{{Operação inválida!}}
+Q --> R([FIM])
+I --TRUE--> M[res = num1 + num2]
+M --> S{{num1, + , num2, =, res}}
+J --TRUE--> K[res = num1 - num2]
+K --> T{{num1, - , num2, =, res}}
+L --TRUE--> N[res = num1 * num2]
+N --> U{{num1, * , num2, =, res}}
+O --TRUE--> P{num2 != 0}
+P --FALSE--> X{{Impossível dividir!}}
+P --TRUE--> Z[res = num1 / num2]
+Z --> V{{num1, / , num2, =, res}}
+X --> R
+S --> R
+T --> R
+U --> R
+V --> R
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
+```java
+ALGORITMO CalculadoraSimples
+DECLARE op: INTEIRO; num1,num2,res: REAL
+
+INICIO
+
+    // Insira seu comentário
+    ESCREVA "Operações válidas: 1(soma), 2(subtração), 3(multiplicação) e 4(divisão)"
+
+    // Insira seu comentário
+    ESCREVA "Digite uma operação:"
+
+    // Insira seu comentário
+    LEIA op
+
+    // Insira seu comentário
+    ESCREVA "Digite um número:"
+    LEIA num1
+
+    // Insira seu comentário
+    ESCREVA "Digite outro número:"
+    LEIA num2
+
+    // Insira seu comentário
+    ESCOLHA
+
+        // Insira seu comentário
+        CASO op == 1
+
+            // Insira seu comentário
+            res = num1 + num2
+
+            // Insira seu comentário
+            ESCREVA num1, "+", num2, "=", res
+
+        // Insira seu comentário
+        CASO op == 2
+
+            // Insira seu comentário
+            res = num1 - num2
+
+            // Insira seu comentário
+            ESCREVA num1, "-", num2, "=", res
+
+        // Insira seu comentário
+        CASO op == 3
+
+            // Insira seu comentário
+            res = num1 * num2
+
+            // Insira seu comentário
+            ESCREVA num1, "*", num2, "=", res
+
+        // Insira seu comentário
+        CASO op == 4
+
+            // Insira seu comentário
+            SE num2 != 0 ENTAO
+
+                // Insira seu comentário
+                res = num1 / num2
+
+                // Insira seu comentário
+                ESCREVA num1, "/", num2, "=", res
+
+            // Insira seu comentário
+            SENAO
+                ESCREVA "Impossível dividir!"
+
+            FIM_SE
+
+    // Insira seu comentário
+    SENAO
+        ESCREVA "Operação inválida!"
+
+    FIM_ESCOLHA
+
+FIM
 ```
-Algoritmo Calculadora
-DECLARE n, númerico, real
-ESCREVA "Digite dois números"
-LEIA n1,n2
-SE o operador for +, ENTAO
- CALCULE n1+n2
-SE o operador for -, ENTAO
- CALCULE n1-n2
-SE o operador for *, ENTAO
- CALCULE n1*n2
-SE o operador for /, ENTAO
- CALCULE n1/n2
-SE na divisão o denomiador for = 0, ENTÃO
- ESCREVA "Inexistente"
-FIM_ALGORITMO
-```
+
 
 #### Teste de mesa (0.5 ponto)
 
-| Número_real | Operador= + | Operador= - | Operador= * | Operador= / | n/0 |
-| -- | -- | -- | -- | -- | -- |
-| n1| n1+n2 | n1-n2 | n1*n2 | n1/n2 | "Inexistente" |
-| n2 | n2+n1 | n2-n1 | n2*n1 | n2/n1 | “Inexistente“ |
+| num1 | num2 | op | num2 != 0 | res | saída               | 
+| --   | --   | -- | --        | --  | --                  |
+| 1    | 0    | 1  |           | 1   | 1 + 0 = 1           |
+| 1    | 0    | 2  |           | 1   | 1 - 0 = 1           |
+| 1    | 0    | 3  |           | 0   | 1 * 0 = 0           |
+| 1    | 0    | 4  | False     |     | Impossível dividir! |
+| 1    | 2    | 4  | True      | 0.5 | 1 / 2 = 0,5         |
+| 1    | 2    | 5  |           |     | Operação inválida!  |
 
 
 ### Exercício 04 (2.5 pontos)
@@ -302,7 +383,7 @@ FIM
 | --    | --                      | --                       | --                       | --         | --                          |
 | 4     | False                   | False                    | False                    | False      | Digite uma idade válida!    |
 | -4    | False                   | False                    | False                    | False      | Digite uma idade válida!    |
-| 8     | True                    | False                    | False                    | False      | Infantial A                 |
-| 11    | False                   | True                     | False                    | False      | Infantial B                 |
-| 17    | False                   | False                    | True                     | False      | Infantial C                 |
+| 8     | True                    | False                    | False                    | False      | Infantil A                 |
+| 11    | False                   | True                     | False                    | False      | Infantil B                 |
+| 17    | False                   | False                    | True                     | False      | Juvenil B             |
 | 21    | False                   | False                    | False                    | True       | Adulto                      |
