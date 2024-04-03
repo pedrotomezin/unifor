@@ -81,16 +81,16 @@ INICIO
     // Armazena os dados da variável "b"
     LEIA b
 
-    // Insira seu comentário
+    // Um novo número é atribuido a variável aux
     aux <- a 
 
-    // Insira seu comentário
+    // Um novo número é atribuido a variável a
     a <- b
 
-    // Insira seu comentário
+    // Um novo número é atribuido a variável b
     b <- aux
 
-    // Insira seu comentário
+    // Exibe resultado das novas variaveis de "a" e "b"
     ESCREVA "a=", a
     ESCREVA "b=", b
 
@@ -300,7 +300,7 @@ DECLARE n,numerador,denominador: INTEIRO; termo, S: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // Dados de entrada armazenados em uma variavel S
     ESCREVA "Digite o número de termos da série S:"
 
     // Insira seu comentário
