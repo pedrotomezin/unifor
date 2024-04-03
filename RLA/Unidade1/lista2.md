@@ -140,7 +140,7 @@ INICIO
     // Instrução de saída, que exibe mensagem ao usuário para adicionar um dado de entrada ao algoritmo
     ESCREVA "Digite a temperatura em Celisus:"
 
-    // Instrução de entrada, que armarzena o dado anterior 
+    // Instrução de entrada, que armarzena o dado anterior, uma variavel C 
     LEIA C
 
     // Instrução de atribuição a uma variável aritmética, para transformar uma temperatura em Celsius para Farenheit
