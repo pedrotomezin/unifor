@@ -137,35 +137,35 @@ DECLARE n, cont, nota, i: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Dados de entrada armazenados em uma variavel "n"
     ESCREVA "Digite a quantidade de notas dos alunos:"
 
-    // Insira seu comentário
+    // Dados da variável n armazenados
     LEIA n
 
-    // Insira seu comentário
+    // Ínicio da variável cont em 0
     cont = 0 
 
-    // Insira seu comentário
+    // Loop contado, executa o comando de I ate n
     PARA i DE 1 ATE n FAÇA
 
-        // Insira seu comentário
+        // Novo dado de entrada, armazenado na variável I
         ESCREVA "Digite a nota do aluno", i, ":"
 
-        // Insira seu comentário
+        // Dados da variável I armazenados
         LEIA nota
 
-        // Insira seu comentário
+        // Executa instruções caso a condição for nota >= 50 E nota <= 100
         SE nota >= 50 E nota <= 100 ENTAO
 
-            // Insira seu comentário
+            // Calcula um novo atribuído a cont
             cont = cont + 1 
 
         FIM_SE
 
     FIM_PARA
 
-    // Insira seu comentário
+    // Exibe na tela o número de alunos aprovados
     ESCREVA "O numero de alunos aprovados e:", cont
 
 FIM
@@ -215,17 +215,17 @@ DECLARE n,i,soma: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Dados de entrada armazenados em uma variável n
     ESCREVA "Digite a quantidade de números<br> (n >= 0):"
     LEIA n
 
-    // Insira seu comentário
+    // Só executa o comando, caso n >=0
     SE n >=0 ENTAO
 
-        // Insira seu comentário
+        // Inicialização da variável soma atribuida a 0
         soma <- 0
 
-        // Insira seu comentário
+        // Inicialização da variável i com valor atribuido =1
         i <- i
 
         // Insira seu comentário
@@ -245,13 +245,13 @@ INICIO
 
         FIM_ENQUANTO
 
-    // Insira seu comentário
+    // Exibe a mensagem na tela, caso o número<0
     SENAO
         "O valor deve ser maior ou igual a zero!"
 
     FIM_SE
 
-    // Insira seu comentário
+    // Exibe a mensagem do resultado da soma dos números
     ESCREVA "A soma dos numeros é , soma"
 
 FIM
@@ -303,30 +303,30 @@ INICIO
     // Dados de entrada armazenados em uma variavel S
     ESCREVA "Digite o número de termos da série S:"
 
-    // Insira seu comentário
+    // Dados da variável S armazenados
     LEIA n
 
-    // Insira seu comentário
+    // Inicialização da variável Soma como 0
     S <- 0
 
-    // Insira seu comentário
+    // Loop contado, executa o comando de i de 0 ate n-1
     PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
 
-        // Insira seu comentário
+        // Calcula o valor da variável numerador
         numerador = 2 * i + 1
 
-        // Insira seu comentário
+        // Calcula o valor da variável denominador
         denominador <- 2 * i + 2
 
-        // Insira seu comentário
+        // Calcula o valor da variável termo, apartir de uma divisão das variáveis numerador / denominador
         termo = numerador / denominador
 
-        // Insira seu comentário
+        // Armazena o resultado de S
         S += termo
 
     FIM_PARA
 
-    // Insira seu comentário
+    // Exibe na tela o resultado da variável S
     ESCREVA "Soma da série S é ", S
 
 FIM
@@ -371,30 +371,30 @@ DECLARE n: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Dados de entrada armazenados na variável n
     ESCREVA "Digite um numero inteiro nao-negativo:"
 
-    // Insira seu comentário
+    // Armazena valores da variável n
     LEIA n
 
-    // Insira seu comentário
+    // Executa condição caso
     SE n >= 0 ENTAO
 
-        // Insira seu comentário
+        // Inicialização da variável Fator como 1
         fator <- 1
 
-        // Insira seu comentário
+        // Loop condicional, executa as instruções até um valor indeterminado
         PARA i DE 1 ATÉ n PASSO 1 FAÇA
 
-            // Insira seu comentário
+            // Calcula o resultado de fator
             fator <- fator * i        // fator *= i
 
         FIM_PARA
 
-        // Insira seu comentário
+        // Exibe a mensagem de saída na tela do resultado fatorial de n
         ESCREVA "O fatorial de, n, é:", fator
 
-    // Insira seu comentário
+    // Exibe a mensagem na tela, quando o valor <0
     SENAO
         ESCREVA "O valor deve ser maior ou igual a zero!"
     FIM_SE
